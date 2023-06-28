@@ -4,7 +4,7 @@ Esse projeto tem como objetivo simular um ar-condicionado, criamos uma API simpl
 
 Cenário da aplicação:
 
-Desenvolver uma aplicação que fará a simulação de umaautomação para um sistema de ar-condicionado. 
+Desenvolver uma aplicação que fará a simulação de uma automação para um sistema de ar-condicionado. 
 Considerando que o equipamento seja de uso doméstico ou residencial.
 
 Requisitos para o funcionamento:
