@@ -24,11 +24,31 @@ class Scheduler:
 
 
             self.scheduler.enter(300, 1, self.monitor_temperature)
-            print("In Running")
+            print("In Running temperature")
+
+    def monitor_scheduler(self):
+            row = Context().select()
+            status = int(row.get("id_status"))
+            date_scheduler = row.get("scheduler") 
+
+            now = datetime.now()
+            now = now.strftime('%Y-%m-%d %H:%M:%S')
+
+            
+            if date_scheduler == now and status == 1:
+                Context().update_status(0)
+                print("Status altered")
+
+
+            self.scheduler.enter(1, 1, self.monitor_scheduler)
+            print("In Running scheduler")
+
 
     def start_monitoring(self):
             
             self.scheduler.enter(0, 1, self.monitor_temperature)
+            self.scheduler.enter(0, 1, self.monitor_scheduler)
+
             self.scheduler.run()
 
             return {"status":200,"information":"scheduler connected"}
