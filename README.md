@@ -22,6 +22,7 @@ Requisitos para o funcionamento:
   • Se a temperatura for maior que 23 graus, ligar automaticamente o ar-condicionado, monitorar a cada 5 minutos a temperatura local
 
 Instruções:
+
   • Os dados da temperatura podem ser obtidos em OpenWeatherMaps API
   
   • As API's devem retornar dados em formato JSON
